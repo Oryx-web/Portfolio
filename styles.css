@@ -76,6 +76,10 @@ button:hover {
     .logo-container h2, .logo-container p{
         font-size: 1.5rem;
     }
+
+    .over {
+        font-size: 1.15rem;
+    }
 }
 
 .logo{
