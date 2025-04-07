@@ -354,11 +354,65 @@ button:hover {
 
 @media (max-width: 480px) {
     .skill-icon svg {
-        width: 40px;
-        height: 40px;
+        width: 40px !important;
+        height: 40px !important;
     }
     .carousel-item {
         font-size: 0.8rem;
+        padding: 0.1rem 2rem !important; /* Adjust padding for smaller screens */
+    }
+    .about-content h2{
+        font-size: 2rem !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .skill-icon svg {
+        width: 110px;
+        height: 110px;
+    }
+    .carousel-background{
+        padding: 2% 10% 14% 10%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1599px) {
+    .skill-icon svg {
+        width: 110px;
+        height: 110px;
+    }
+    .carousel-background{
+        padding: 2% 10% 16% 10%;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .skill-icon svg {
+        width: 90px;
+        height: 90px;
+    }
+    .carousel-background{
+        padding: 2% 10% 15% 10%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .skill-icon svg {
+        width: 80px;
+        height: 80px;
+    }
+    .carousel-background{
+        padding: 2% 10% 18% 10%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .skill-icon svg {
+        width: 70px;
+        height: 70px;
+    }
+    .carousel-background{
+        padding: 2% 10% 20% 10%;
     }
 }
 
@@ -388,7 +442,6 @@ button:hover {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    padding: 3% 0 15% 0;
     background-color: #1c1c1c;
     z-index: 0; /* Ensure background is behind carousel items */
 }
@@ -407,7 +460,7 @@ button:hover {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 10% 25% 8% 10%;
+        padding: 10% 25% 10% 10%;
         margin-bottom: 2%;
     }
     .carousel-background h3{
@@ -434,14 +487,19 @@ button:hover {
 /* Carousel Items */
 .carousel-item {
     position: absolute;
-    width: 100%;
-    display: flex;
+    display: flex; /* Ensure content is aligned properly */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transform-origin: center;
     transition: transform 0.3s ease;
     z-index: 2; /* Ensure items are above the carousel */
+    background: rgba(41, 41, 41, 0.8); /* Add semi-transparent background */
+    padding: 0.3rem 3.5rem; /* Add padding for better spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    width: auto; /* Adjust width to fit content */
+    max-width: 90%; /* Optional: Prevent items from being too wide */
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 .carousel-item:hover {
@@ -523,6 +581,7 @@ button:hover {
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .project-card p {
@@ -553,7 +612,8 @@ button:hover {
     justify-items: center;
     justify-content: center;
     padding: 5px 10px;
-    background: transparent;
+    border-radius: 15px;
+    background-color: rgba(148, 148, 148, 0.5);
 }
 
 .project-skill p{
@@ -802,9 +862,16 @@ form button:focus {
     margin-right: 5px;
 }
 
-#hero, #projects, #skills, #about, #contact, #footer {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+@media (min-width: 480px) {
+    #hero{
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+    
+    #projects, #skills, #about, #contact, #footer {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
 }
 
 @media (max-width: 768px) {

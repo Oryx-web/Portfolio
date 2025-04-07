@@ -6,9 +6,8 @@ const carousels = document.querySelectorAll(".carousel");
 
 // Function to calculate translateZ based on screen size
 const getTranslateZ = () => {
-  if (window.innerWidth <= 480) return 40;
   if (window.innerWidth <= 639) return 50;
-  if (window.innerWidth <= 768) return 70;
+  if (window.innerWidth <= 1024) return 90;
   return 130// Default for larger screens
 };
 
