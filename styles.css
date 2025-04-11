@@ -620,11 +620,6 @@ button:hover {
     margin: 0;
 }
 
-.monster-hunter {
-    position: relative;
-    overflow: hidden; /* Ensure content doesn't overflow the container */
-}
-
 .monster-hunter::before {
     content: "";
     position: absolute;
@@ -632,13 +627,22 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("project_images/proyecto1.webp"); /* Ensure the path is relative to the CSS file */
+    background-image: url("project_images/proyecto1.png"); /* Ensure the path is relative to the CSS file */
     background-repeat: no-repeat;
     background-size: cover; /* Ensure the image covers the element */
     background-position: center; /* Center the image */
     filter: blur(2px) brightness(0.6); /* Apply blur only to the image */
     z-index: 1; /* Place it behind the text */
     transition: filter 0.3s ease; /* Add transition for smooth effect */
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+
+.project-card:hover::before {
+    filter: blur(0px) brightness(1); /* Remove blur on hover */
 }
 
 .project-card h3,
@@ -650,13 +654,9 @@ button:hover {
     transition: opacity 0.3s ease; /* Add transition for smooth effect */
 }
 
-.monster-hunter:hover::before {
-    filter: blur(0px) brightness(1); /* Remove blur on hover */
-}
-
-.monster-hunter:hover h3,
-.monster-hunter:hover p,
-.monster-hunter:hover .project-skills {
+.project-card:hover h3,
+.project-card:hover p,
+.project-card:hover .project-skills {
     opacity: 0; /* Hide text and skills on hover */
 }
 
